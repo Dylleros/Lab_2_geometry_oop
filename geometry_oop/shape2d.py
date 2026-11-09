@@ -27,7 +27,7 @@ class Shape2D:
         self._y = value
 
 
-    def _validate_xy(value: float | int) -> None:
+    def _validate_xy(self, value: float | int) -> None:
         if not isinstance(value, (int, float)):
             raise TypeError(f"Coordinates must be int or float not {type(value).__name__}")
 
