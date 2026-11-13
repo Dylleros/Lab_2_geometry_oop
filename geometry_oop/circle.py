@@ -3,7 +3,7 @@ import numpy as np
 
 class Circle(Shape2D):
     def __init__(self, radius: float | int, x: float| int = 0, y: float | int = 0) -> None:
-        super() .__init__(x,y)
+        super().__init__(x,y)
         self.radius = radius
 
     @property
