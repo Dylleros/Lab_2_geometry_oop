@@ -43,4 +43,24 @@ class Shape2D:
         self.x = new_x
         self.y = new_y
 
+    def __lt__(self, other: object) -> bool:
+        return self.area < self._area_comparison(other)
+
+    def __gt__(self, other: object) -> bool:
+        return self.area > self._area_comparison(other)
+
+    def __le__(self, other: object) -> bool:
+        return self.area <= self._area_comparison(other)
+
+    def __ge__(self, other: object) -> bool:
+        return self.area >= self._area_comparison(other)
+
+    def _area_comparison(self, other: object) -> float:
+        if not isinstance(other, Shape2D):
+            raise TypeError(f"Both shapes must be 2D in order to compare area")
+        return other.area
+     
+
+            
+
 
